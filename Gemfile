@@ -5,7 +5,8 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  # gem 'sqlite3', '1.3.8'
+  gem "mysql2", "~> 0.3.20"
   gem 'rspec-rails', '3.3.2'
   gem 'guard-rspec', '4.6.0'
   # gem 'rspec-core', '~> 2.14.0'
