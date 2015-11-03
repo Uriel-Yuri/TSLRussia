@@ -10,10 +10,15 @@ describe "Static pages" do
       visit '/static_pages/home'
       expect(page).to have_content('Главная страница сайта')
     end
-
-    it "should have the title 'Домашняя'" do
+    
+    it "should have the base title" do
       visit '/static_pages/home'
-      expect(page).to have_title("#{base_title} | Домашняя")
+      expect(page).to have_title("Тестовая страница нового сайта TSLRussia.org")
+    end
+
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title('| Домашняя')
     end
   end
 
