@@ -2,62 +2,34 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-  let(:base_title) { "Тестовая страница нового сайта TSLRussia.org" }
+  subject { page }
 
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content 'Главная страница сайта'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Главная страница сайта')
-    end
-    
-    it "should have the base title" do
-      visit '/static_pages/home'
-      expect(page).to have_title("Тестовая страница нового сайта TSLRussia.org")
-    end
-
-    it "should not have a custom page title" do
-      visit '/static_pages/home'
-      expect(page).not_to have_title('| Домашняя')
-    end
+    it { should have_content('Главная страница сайта') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Домашняя') }
   end
 
   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the content 'Страница в разработке'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Страница в разработке')
-    end
-
-    it "should have the title 'Помощь'" do
-      visit '/static_pages/help'
-      expect(page).to have_title("#{base_title} | Помощь")
-    end
+    it { should have_content('Страница в разработке') }
+    it { should have_title(full_title('Помощь')) }
   end
 
   describe "About page" do
+    before { visit about_path }
 
-    it "should have the content 'Пока работает только старый сайт'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('Пока работает только старый сайт')
-    end
-
-    it "should have the title 'О нас'" do
-      visit '/static_pages/about'
-      expect(page).to have_title("#{base_title} | О нас")
-    end
+    it { should have_content('Пока работает только старый сайт') }
+    it { should have_title(full_title('О нас')) }
   end
 
   describe "Contact page" do
+    before { visit contact_path }
 
-    it "should have the content 'Все контакты пока на сайте'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('Все контакты пока на сайте')
-    end
-
-    it "should have the title 'Контакты'" do
-      visit '/static_pages/contact'
-      expect(page).to have_title("#{base_title} | Контакты")
-    end
+    it { should have_content('Все контакты пока на сайте') }
+    it { should have_title(full_title('Контакты')) }
   end
 end

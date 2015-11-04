@@ -32,7 +32,9 @@ group :test do
   gem 'wdm', '0.1.0'
 end
 
-gem 'sass-rails', '4.0.1'
+gem 'sprockets', '<= 2.11.0'
+gem 'sass-rails'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'

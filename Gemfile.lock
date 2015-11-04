@@ -26,6 +26,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    bootstrap-sass (2.3.2.0)
+      sass (~> 3.2)
     builder (3.1.4)
     capybara (2.5.0)
       mime-types (>= 1.16)
@@ -164,12 +166,13 @@ GEM
       websocket (~> 1.0.4)
     shellany (0.0.1)
     slop (3.6.0)
+    spork (1.0.0rc4)
     spork (1.0.0rc4-x86-mingw32)
       win32-process
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
-    sprockets (2.12.4)
+    sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -201,6 +204,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bootstrap-sass (= 2.3.2.0)
   capybara (>= 2.2.0)
   childprocess (= 0.3.6)
   coffee-rails (= 4.0.1)
@@ -215,10 +219,11 @@ DEPENDENCIES
   rb-notifu (= 0.0.4)
   rspec-core (= 3.3.2)
   rspec-rails (= 3.3.2)
-  sass-rails (= 4.0.1)
+  sass-rails
   sdoc (= 0.3.20)
   selenium-webdriver (= 2.35.1)
   spork-rails (= 4.0.0)
+  sprockets (<= 2.11.0)
   turbolinks (= 1.1.1)
   uglifier (= 2.1.1)
   wdm (= 0.1.0)

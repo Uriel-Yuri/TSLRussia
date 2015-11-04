@@ -1,6 +1,14 @@
 <% provide(:title, '') %>
-<h1>Домашняя</h1>
-<p>
+
+<div class="center hero-unit">
+  <h1>Приветствую!</h1>
+
+  <h2>
   Главная страница сайта в разработке. <a href="http://TSLRussia.org.org/">Можете перейти по ссылке на старую версию сайта.</a><br>
   Разработка этого сайта осуществляется с использованием фреймворка <a href="http://rubyonrails.org/">Ruby on Rails</a>.<br>Это пока тестовая страничка.
-</p>
+  </h2>
+
+  <%= link_to "Присоединяйтесь!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
